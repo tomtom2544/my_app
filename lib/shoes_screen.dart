@@ -5,19 +5,18 @@ class ShoesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Example list of shoes (could be fetched from a model or API)
     final List<Map<String, String>> shoesList = [
       {
         'name': 'Running Shoes',
-        'image': 'assets/images/shoes1.png', // Example image path
+        'image': 'assets/images/shoes1.png',
       },
       {
         'name': 'Sneakers',
-        'image': 'assets/images/shoes2.png', // Example image path
+        'image': 'assets/images/shoes2.png',
       },
       {
         'name': 'Sports Shoes',
-        'image': 'assets/images/shoes3.png', // Example image path
+        'image': 'assets/images/shoes3.png',
       },
     ];
 
@@ -30,16 +29,15 @@ class ShoesScreen extends StatelessWidget {
         child: GridView.builder(
           itemCount: shoesList.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, // Two columns
-            crossAxisSpacing: 10.0, // Space between columns
-            mainAxisSpacing: 10.0, // Space between rows
-            childAspectRatio: 0.75, // Aspect ratio of each tile
+            crossAxisCount: 2,
+            crossAxisSpacing: 10.0,
+            mainAxisSpacing: 10.0,
+            childAspectRatio: 0.75,
           ),
           itemBuilder: (context, index) {
             final shoe = shoesList[index];
             return GestureDetector(
               onTap: () {
-                // Handle shoe item tap (e.g., navigate to a detailed product page)
               },
               child: Card(
                 elevation: 4.0,
@@ -50,7 +48,7 @@ class ShoesScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset(
-                      shoe['image']!, // Image for the shoe
+                      shoe['image']!,
                       height: 150.0,
                       width: 150.0,
                       fit: BoxFit.cover,
